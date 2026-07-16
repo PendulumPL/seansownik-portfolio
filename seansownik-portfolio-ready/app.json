@@ -1,0 +1,17 @@
+{
+  "expo": {
+    "name": "Seansownik",
+    "slug": "seansownik",
+    "version": "0.1.6",
+    "orientation": "portrait",
+    "android": {
+      "package": "com.seansownik.app",
+      "versionCode": 6
+    },
+    "userInterfaceStyle": "automatic",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  }
+}
