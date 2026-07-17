@@ -1,8 +1,14 @@
-﻿# Seansownik
+# Seansownik
 
 Mobilna aplikacja do prowadzenia prywatnej listy filmów i seriali. Pozwala wyszukiwać tytuły w TMDB, przypisywać je do platform streamingowych, zmieniać status oglądania oraz zapisywać własne oceny i notatki.
 
-![Ekran główny Seansownika](docs/screenshots/seansownik-home.png)
+## Jak wygląda aplikacja
+
+| Biblioteka i lista do obejrzenia | Wyszukiwanie w TMDB |
+|:---:|:---:|
+| <img src="docs/screenshots/01-home-library.jpg" alt="Ekran główny z listą filmów i seriali" width="360"> | <img src="docs/screenshots/02-tmdb-search.jpg" alt="Wyniki wyszukiwania tytułu Diuna w TMDB" width="360"> |
+| **Filtrowanie według platformy** | **Ocena i prywatna notatka** |
+| <img src="docs/screenshots/03-platform-filter.png" alt="Lista obejrzanych tytułów dostępnych na Netflix" width="360"> | <img src="docs/screenshots/04-rating-and-note.png" alt="Edycja tytułu z oceną, notatką i platformą" width="360"> |
 
 ## Najważniejsze funkcje
 
