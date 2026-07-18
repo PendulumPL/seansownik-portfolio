@@ -1,5 +1,7 @@
 node_modules/
 .npm-cache/
+.local-home/
+.expo-local/
 .expo/
 dist/
 android/

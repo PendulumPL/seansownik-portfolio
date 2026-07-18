@@ -93,4 +93,10 @@ Jest to działające MVP przeznaczone dla jednego urządzenia. Projekt nie zawie
 
 ## Autor
 
+**Paweł Karolak**
+
+GitHub: [PendulumPL](https://github.com/PendulumPL)
+
+Kontakt: przywrocwspomnienia@gmail.com
+
 Projekt powstał jako samodzielnie prowadzony eksperyment produktowy rozwijany iteracyjnie z wykorzystaniem narzędzi AI do implementacji i testowania.
