@@ -19,7 +19,9 @@ Mobilna aplikacja do prowadzenia prywatnej listy filmów i seriali. Pozwala wysz
 - ręczne dodawanie tytułów,
 - lokalny zapis danych na urządzeniu,
 - cofnięcie przypadkowego usunięcia,
-- eksport kopii listy przez systemowe menu udostępniania,
+- numerowanie obejrzanych tytułów globalnie i osobno dla każdej platformy,
+- wykrywanie duplikatów z możliwością otwarcia istniejącego wpisu,
+- eksport i ponowne wczytanie kopii listy w formacie JSON,
 - obsługa pustych wyników i tytułów bez plakatu.
 
 ## Technologie
@@ -55,6 +57,7 @@ Plik `.env` jest ignorowany przez Git i nie powinien być publikowany.
 npm run start
 npm run android
 npm run ios
+npm test
 ```
 
 ## Architektura
@@ -74,17 +77,17 @@ Jest to działające MVP przeznaczone dla jednego urządzenia. Projekt nie zawie
 
 ## Kontrola jakości
 
-- testy logiki mapowania odpowiedzi TMDB uruchamiane przez `node --test`,
+- 13 testów logiki mapowania TMDB, importu kopii, numerowania i wykrywania duplikatów,
 - GitHub Actions sprawdza instalację, testy oraz eksport Android przy każdym pushu i pull requeście,
 - trwające zapytania wyszukiwania są anulowane po zmianie frazy,
-- błędy sieciowe i błędy lokalnego zapisu są widoczne dla użytkownika.
+- błędy sieciowe i błędy lokalnego zapisu są widoczne dla użytkownika,
+- nieprawidłowa kopia zapasowa nie zastępuje dotychczasowej listy.
 
 ## Kierunki rozwoju
 
 - podział głównego ekranu na mniejsze komponenty i hooki,
 - migracja do TypeScript,
 - szersze testy jednostkowe i testy komponentów,
-- import wcześniej wyeksportowanej kopii listy,
 - automatyczne kopie zapasowe lub opcjonalna synchronizacja,
 - opcjonalna synchronizacja między urządzeniami.
 
