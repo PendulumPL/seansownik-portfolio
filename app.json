@@ -3,15 +3,30 @@
     "name": "Seansownik",
     "slug": "seansownik",
     "version": "0.2.1",
+    "icon": "./assets/icon.png",
     "orientation": "portrait",
     "android": {
       "package": "com.seansownik.app",
-      "versionCode": 11
+      "versionCode": 11,
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/icon.png",
+        "backgroundColor": "#171923"
+      },
+      "blockedPermissions": [
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE",
+        "android.permission.SYSTEM_ALERT_WINDOW",
+        "android.permission.VIBRATE"
+      ]
     },
     "userInterfaceStyle": "automatic",
     "platforms": [
       "android",
       "ios"
+    ],
+    "plugins": [
+      "expo-asset",
+      "expo-font"
     ]
   }
 }
