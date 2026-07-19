@@ -119,6 +119,6 @@ Najbliższy techniczny krok to podział App.js na mniejsze komponenty i hooki, a
 
 ## Autor
 
-**Paweł Karolak** · [GitHub: PendulumPL](https://github.com/PendulumPL)
+**Paweł Karolak** · [LinkedIn](https://www.linkedin.com/in/pawel-karolak-lodz/) · [GitHub: PendulumPL](https://github.com/PendulumPL)
 
 Kontakt: [przywrocwspomnienia@gmail.com](mailto:przywrocwspomnienia@gmail.com)
