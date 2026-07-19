@@ -14,3 +14,7 @@ ios/
 !.env.example
 .DS_Store
 Thumbs.db
+*.jks
+*.keystore
+credentials.json
+credentials/

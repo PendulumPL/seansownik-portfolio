@@ -27,6 +27,12 @@
     "plugins": [
       "expo-asset",
       "expo-font"
-    ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "d62e4c47-241c-47f1-8b91-0d26ba61fa6e"
+      }
+    },
+    "owner": "pendulumpl-apps"
   }
 }
