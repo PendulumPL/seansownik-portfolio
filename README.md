@@ -6,6 +6,12 @@ Mobilna aplikacja na Androida do prowadzenia prywatnej listy filmów i seriali. 
 
 > Działające MVP · 13 testów automatycznych · CI w GitHub Actions · produkcyjny pakiet Android App Bundle
 
+## Drugi projekt: Myszy
+
+[Myszy](https://github.com/PendulumPL/myszy-android) to osobna aplikacja Android do wspólnego rozliczania wydatków przez dwie sparowane osoby. Łączy synchronizację w Supabase z ochroną RLS, podziałem kwoty, avatarami, paragonami, importem kontrolnego PDF i historią wyrównań.
+
+Wersja testerska jest celowo spokojna i prywatna: odczyt powiadomień płatniczych pozostaje wyłączony i opisany jako funkcja kolejnego update'u. W dalszej roadmapie są także angielski interfejs, OCR paragonów oraz ewentualna nieinwazyjna monetyzacja bez śledzenia wydatków.
+
 ## Problem i rozwiązanie
 
 Projekt powstał z rzeczywistej potrzeby prowadzenia wspólnej, czytelnej listy tytułów. Zamiast rozbudowanego systemu kont aplikacja działa w modelu **local-first**: nie wymaga rejestracji, a lista i notatki pozostają na telefonie.
