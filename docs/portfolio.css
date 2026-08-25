@@ -808,6 +808,20 @@ footer a { color: var(--blue); }
   margin-top: 20px;
 }
 
+.allegro-overview a {
+  aspect-ratio: 822 / 693;
+  overflow: hidden;
+}
+
+.allegro-overview .overview-crop-image {
+  position: absolute;
+  top: 0;
+  left: -2.44%;
+  width: 104.87%;
+  max-width: none;
+  transform: translateY(-32.88%);
+}
+
 .case-figure {
   margin: 0;
   overflow: hidden;
