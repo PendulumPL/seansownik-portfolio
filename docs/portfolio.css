@@ -800,6 +800,14 @@ footer a { color: var(--blue); }
   object-fit: contain;
 }
 
+.allegro-overview-card {
+  grid-column: 1 / -1;
+}
+
+.allegro-overview-card .case-figure {
+  margin-top: 20px;
+}
+
 .case-figure {
   margin: 0;
   overflow: hidden;
