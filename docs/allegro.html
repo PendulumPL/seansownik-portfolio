@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Case study panelu analitycznego Allegro: dwa konta sprzedażowe, oferty aktywne i zakończone, oceny produktów, filtry i eksport do Excela.">
+  <meta name="theme-color" content="#112742">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Panel analityczny Allegro — case study">
+  <meta property="og:description" content="Projekt służbowy w PYC-SPORT: dwa konta, oferty, oceny produktów, kontrola i eksport do Excela.">
+  <meta property="og:image" content="https://pendulumpl.github.io/seansownik-portfolio/og-allegro.png">
+  <meta property="og:url" content="https://pendulumpl.github.io/seansownik-portfolio/allegro.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Panel analityczny Allegro — case study">
+  <meta name="twitter:description" content="Dwa konta sprzedażowe, oferty aktywne i zakończone, oceny produktów, filtry i eksport do Excela.">
+  <meta name="twitter:image" content="https://pendulumpl.github.io/seansownik-portfolio/og-allegro.png">
+  <title>Panel analityczny Allegro — case study · Paweł Karolak</title>
+  <link rel="stylesheet" href="portfolio.css">
+</head>
+<body>
+<div class="wrap">
+  <nav class="site-nav" aria-label="Główna nawigacja">
+    <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">PK</span><span>Paweł Karolak</span></a>
+    <div class="nav-links"><a href="index.html#projekty-sluzbowe">Projekty</a><a href="#przebieg">Jak działa</a><a href="#rezultat">Rezultat</a><a href="https://github.com/PendulumPL">GitHub ↗</a><a class="nav-cta" href="https://www.linkedin.com/in/pawel-karolak-lodz/">LinkedIn ↗</a></div>
+  </nav>
+
+  <main id="top">
+    <header class="case-hero">
+      <div class="case-hero-copy">
+        <p class="eyebrow">Projekt służbowy · PYC-SPORT · 2026</p>
+        <h1>Panel analityczny Allegro — oferty i oceny</h1>
+        <p class="lead">Narzędzie pomagające wychwycić produkty wymagające uwagi: łączy oferty z dwóch kont, oceny produktów, liczbę aktywnych ofert i status dalszej kontroli.</p>
+        <div class="actions"><a class="button primary" href="#przebieg">Zobacz przebieg</a><a class="button" href="index.html">Wróć do portfolio</a></div>
+        <p class="hero-note">Kod nie jest publiczny. Wszystkie widoczne nazwy, identyfikatory i dane zostały zanonimizowane lub wymyślone.</p>
+      </div>
+      <div class="case-visual" aria-label="Zanonimizowany widok panelu Allegro">
+        <div class="case-shot allegro"><img src="case-studies/allegro/results.png" alt="Panel wyników z ocenami, rozkładem ocen i statusem kontroli"><span class="case-status">Działający pilot</span></div>
+      </div>
+    </header>
+
+    <div class="fact-strip" aria-label="Najważniejsze informacje o projekcie">
+      <div class="fact-item"><small>Kontekst</small><strong>Projekt w ramach etatu w PYC-SPORT</strong></div>
+      <div class="fact-item"><small>Moja rola</small><strong>Problem, wymagania, logika, pilot, testy i dokumentacja</strong></div>
+      <div class="fact-item"><small>Zakres</small><strong>Dwa konta, oferty, oceny i eksport Excel</strong></div>
+      <div class="fact-item"><small>Status</small><strong>Działający pilot bez stałego hostingu produkcyjnego</strong></div>
+    </div>
+
+    <section aria-labelledby="context-title">
+      <div class="section-head"><div><span class="section-label">Kontekst</span><h2 id="context-title">Po co powstał?</h2></div><p>Przy większym katalogu trudno regularnie otwierać produkty pojedynczo, porównywać ich oceny i pamiętać, które przypadki zostały już sprawdzone.</p></div>
+      <div class="content-grid">
+        <article class="content-card highlight"><h3>Problem operacyjny</h3><p>Dane o ofertach i ocenach były dostępne, ale brakowało jednego widoku, który od razu odfiltrowałby produkty spełniające określone kryteria jakościowe.</p></article>
+        <article class="content-card green"><h3>Cel pilota</h3><p>Przygotować krótką listę produktów wymagających uwagi, pokazać kontekst oceny i liczbę aktywnych ofert oraz uporządkować dalszą kontrolę.</p><p>Narzędzie nie podejmuje decyzji za użytkownika i nie automatyzuje odpowiedzi na opinie.</p></article>
+      </div>
+    </section>
+
+    <section aria-labelledby="role-title">
+      <div class="section-head"><div><span class="section-label">Odpowiedzialność</span><h2 id="role-title">Co zrobiłem osobiście.</h2></div><p>Najważniejszą częścią było przełożenie codziennego problemu na reguły, które da się sprawdzić i wyjaśnić użytkownikowi.</p></div>
+      <div class="content-grid">
+        <article class="content-card"><h3>Wymagania i logika</h3><p>Określiłem potrzebne dane z dwóch kont, sposób łączenia ofert z produktem, kryteria filtrowania ocen, statusy kontroli oraz zakres raportu Excel.</p></article>
+        <article class="content-card"><h3>Pilot i testy</h3><p>Przygotowałem działający panel przy wsparciu AI, weryfikowałem poprawność pobieranych danych, scenariusze filtrów, przejścia do recenzji i eksport wyników. Opracowałem również anonimową dokumentację.</p></article>
+      </div>
+    </section>
+
+    <section id="przebieg" aria-labelledby="flow-title">
+      <div class="section-head"><div><span class="section-label">Przepływ pracy</span><h2 id="flow-title">Od API do listy kontrolnej.</h2></div><p>Panel zbiera dane, porządkuje je według produktu i pokazuje tylko przypadki spełniające wybrane kryterium.</p></div>
+      <div class="flow-list">
+        <article class="flow-step"><b>1</b><h3>Pobranie ofert</h3><p>Wczytanie ofert aktywnych i zakończonych z dwóch kont sprzedażowych.</p></article>
+        <article class="flow-step"><b>2</b><h3>Połączenie danych produktu</h3><p>Zestawienie oferty z oceną produktu, rozkładem ocen oraz liczbą aktywnych ofert przypisanych do produktu.</p></article>
+        <article class="flow-step"><b>3</b><h3>Zastosowanie filtrów</h3><p>Użytkownik może wybrać konto, status oferty, kryterium ocen, status kontroli albo wyszukać konkretny produkt.</p></article>
+        <article class="flow-step"><b>4</b><h3>Lista wymagająca uwagi</h3><p>Panel pokazuje tylko rekordy spełniające warunek, bez ręcznego przeglądania całego katalogu.</p></article>
+        <article class="flow-step"><b>5</b><h3>Kontrola i raport</h3><p>Można oznaczyć przypadek jako NOWY lub OTWARTY, dopisać uwagę, przejść do recenzji oraz pobrać wynik do Excela.</p></article>
+      </div>
+    </section>
+
+    <section aria-labelledby="filters-title">
+      <div class="section-head"><div><span class="section-label">Widoki</span><h2 id="filters-title">Najważniejsza informacja bez szumu.</h2></div><p>Interfejs celowo prowadzi od kryterium do wyniku. Użytkownik widzi nie tylko średnią, lecz również rozkład ocen i stan dalszej obsługi. Każdy ekran można otworzyć w pełnej rozdzielczości.</p></div>
+      <div class="gallery-grid readable">
+        <figure class="case-figure screen-focus allegro-filters"><a href="case-studies/allegro/filters.png" target="_blank" rel="noopener" aria-label="Otwórz filtry panelu w pełnej rozdzielczości"><img src="case-studies/allegro/filters.png" alt="Zanonimizowany pasek filtrów panelu Allegro" loading="lazy"></a><figcaption>Filtry według konta, statusu oferty, ocen i statusu kontroli. Kliknij, aby powiększyć.</figcaption></figure>
+        <figure class="case-figure screen-focus allegro-results"><a href="case-studies/allegro/results.png" target="_blank" rel="noopener" aria-label="Otwórz wyniki panelu w pełnej rozdzielczości"><img src="case-studies/allegro/results.png" alt="Zanonimizowane wyniki z oceną, rozkładem i statusem kontroli" loading="lazy"></a><figcaption>Średnia ocena, rozkład 1–5, notatka i status kontroli bez ujawniania nazw produktów. Kliknij, aby powiększyć.</figcaption></figure>
+      </div>
+    </section>
+
+    <section id="rezultat" aria-labelledby="result-title">
+      <div class="section-head"><div><span class="section-label">Rezultat</span><h2 id="result-title">Działający proces kontrolny.</h2></div><p>Rezultatem nie jest deklarowana poprawa sprzedaży, której nie mierzono. Jest nim działający sposób zebrania danych, odfiltrowania produktów i przekazania wyniku do dalszej analizy.</p></div>
+      <div class="proof-box">
+        <div class="proof-number"><strong>2</strong><span>konta sprzedażowe obsługiwane w jednym panelu</span></div>
+        <div class="proof-copy"><h3>Co panel umożliwiał?</h3><p>Pobranie ofert aktywnych i zakończonych, ocen oraz rozkładu ocen, sprawdzenie liczby aktywnych ofert dla produktu, zastosowanie trzech kryteriów jakościowych i eksport listy kontrolnej.</p><p>Potencjalną wartością biznesową jest szybsze wychwytywanie przypadków wymagających reakcji. Nie przedstawiam tego jako zmierzonego wzrostu sprzedaży ani spadku liczby reklamacji.</p></div>
+      </div>
+    </section>
+
+    <section aria-labelledby="limits-title">
+      <div class="section-head"><div><span class="section-label">Technologia i granice</span><h2 id="limits-title">Uczciwy status projektu.</h2></div><p>Panel był działającym pilotem uruchamianym przez Google Colab i tymczasowy tunel Cloudflare. Nie był gotowym, stale utrzymywanym systemem produkcyjnym.</p></div>
+      <div class="content-grid">
+        <article class="content-card"><h3>Technologie</h3><p>Python, Flask, JavaScript, Allegro API, Excel, Google Colab i Cloudflare Tunnel.</p><div class="stack"><span>Python</span><span>Flask</span><span>JavaScript</span><span>Allegro API</span><span>REST API</span><span>Excel</span></div></article>
+        <article class="content-card"><h3>Co dalej wymagałoby pracy?</h3><p>Stały hosting, bezpieczne logowanie, monitoring odświeżania danych, formalne role użytkowników, pełne testy integracyjne i proces utrzymania wersji produkcyjnej.</p></article>
+      </div>
+    </section>
+
+    <section aria-labelledby="privacy-title">
+      <div class="privacy-note"><span class="privacy-icon" aria-hidden="true">✓</span><div><h3 id="privacy-title">Poufność</h3><p>Case study nie zawiera nazw kont sprzedażowych, rzeczywistych produktów, identyfikatorów ofert, adresów panelu, danych dostępowych ani tokenów API. Widoczne nazwy i rekordy są przykładowe lub zanonimizowane. Kod pozostaje niepubliczny.</p></div></div>
+    </section>
+
+    <section aria-label="Następny projekt"><a class="next-project" href="multi-carrier.html"><span><small>Drugie case study służbowe</small><strong>Panel analizy przesyłek — Multi-Carrier</strong></span><span class="arrow" aria-hidden="true">→</span></a></section>
+  </main>
+  <footer><span>Panel analityczny Allegro · Paweł Karolak · 2026</span><span><a href="index.html">Portfolio główne</a> · <a href="mailto:pawel.karolak1996@gmail.com">Kontakt</a></span></footer>
+</div>
+</body>
+</html>

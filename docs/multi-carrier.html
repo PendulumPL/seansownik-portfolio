@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Case study panelu analizy przesyłek: DHL, DPD i InPost, raporty Excel/CSV oraz testy na około 6000 rzeczywistych rekordów.">
+  <meta name="theme-color" content="#112742">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Panel analizy przesyłek — case study">
+  <meta property="og:description" content="Projekt służbowy w PYC-SPORT: trzy integracje API, jeden proces analizy i testy na około 6000 rekordów.">
+  <meta property="og:image" content="https://pendulumpl.github.io/seansownik-portfolio/og-multi-carrier.png">
+  <meta property="og:url" content="https://pendulumpl.github.io/seansownik-portfolio/multi-carrier.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Panel analizy przesyłek — case study">
+  <meta name="twitter:description" content="DHL, DPD i InPost, raporty Excel/CSV oraz testy na około 6000 rekordów.">
+  <meta name="twitter:image" content="https://pendulumpl.github.io/seansownik-portfolio/og-multi-carrier.png">
+  <title>Panel analizy przesyłek — case study · Paweł Karolak</title>
+  <link rel="stylesheet" href="portfolio.css">
+</head>
+<body>
+<div class="wrap">
+  <nav class="site-nav" aria-label="Główna nawigacja">
+    <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">PK</span><span>Paweł Karolak</span></a>
+    <div class="nav-links"><a href="index.html#projekty-sluzbowe">Projekty</a><a href="#przebieg">Jak działa</a><a href="#dowody">Rezultat</a><a href="https://github.com/PendulumPL">GitHub ↗</a><a class="nav-cta" href="https://www.linkedin.com/in/pawel-karolak-lodz/">LinkedIn ↗</a></div>
+  </nav>
+
+  <main id="top">
+    <header class="case-hero">
+      <div class="case-hero-copy">
+        <p class="eyebrow">Projekt służbowy · PYC-SPORT · 2026</p>
+        <h1>Panel analizy przesyłek — Multi-Carrier</h1>
+        <p class="lead">Jedno narzędzie do importu danych, pobrania statusów DHL, DPD i InPost oraz przygotowania wspólnego raportu dla przesyłek wymagających kontroli.</p>
+        <div class="actions"><a class="button primary" href="#przebieg">Zobacz przebieg</a><a class="button" href="index.html">Wróć do portfolio</a></div>
+        <p class="hero-note">Kod nie jest publiczny. Case study zawiera wyłącznie zanonimizowane materiały i dane przykładowe.</p>
+      </div>
+      <div class="case-visual" aria-label="Zanonimizowany widok panelu przesyłek">
+        <div class="case-shot carrier"><img src="case-studies/multi-carrier/report.png" alt="Panel po zakończeniu analizy z raportami dla DHL, DPD i InPost"><span class="case-status">Działający pilot</span></div>
+      </div>
+    </header>
+
+    <div class="fact-strip" aria-label="Najważniejsze informacje o projekcie">
+      <div class="fact-item"><small>Kontekst</small><strong>Projekt w ramach etatu w PYC-SPORT</strong></div>
+      <div class="fact-item"><small>Moja rola</small><strong>Problem, wymagania, logika, pilot, testy i dokumentacja</strong></div>
+      <div class="fact-item"><small>Zakres</small><strong>DHL, DPD i InPost; Excel oraz CSV</strong></div>
+      <div class="fact-item"><small>Status</small><strong>Działający pilot bez stałego hostingu produkcyjnego</strong></div>
+    </div>
+
+    <section aria-labelledby="context-title">
+      <div class="section-head"><div><span class="section-label">Kontekst</span><h2 id="context-title">Dlaczego powstał?</h2></div><p>Informacje o przesyłkach były rozproszone pomiędzy systemami przewoźników. Ręczne sprawdzanie numer po numerze utrudniało regularną kontrolę większych zestawień.</p></div>
+      <div class="content-grid">
+        <article class="content-card highlight"><h3>Problem operacyjny</h3><p>Pracownik potrzebował szybko rozpoznać, które przesyłki są doręczone, opóźnione, zwracane albo wymagają dalszego działania — bez otwierania osobno każdej strony przewoźnika.</p></article>
+        <article class="content-card green"><h3>Cel pilota</h3><p>Umożliwić zbiorczą kontrolę przesyłek, ujednolicić statusy z trzech źródeł i przygotować wynik w formacie przydatnym do dalszej pracy.</p><p>Panel miał wspierać decyzję człowieka, nie zastępować jej automatyczną oceną.</p></article>
+      </div>
+    </section>
+
+    <section aria-labelledby="role-title">
+      <div class="section-head"><div><span class="section-label">Odpowiedzialność</span><h2 id="role-title">Co zrobiłem osobiście.</h2></div><p>Projekt wynikał z mojej znajomości procesu. AI było narzędziem wspierającym implementację i analizę błędów — nie zastępowało decyzji o zakresie ani weryfikacji działania.</p></div>
+      <div class="content-grid">
+        <article class="content-card"><h3>Proces i logika</h3><p>Zidentyfikowałem problem, określiłem dane wejściowe, potrzebne statusy, wyjątki i strukturę raportu. Ustaliłem również sposób rozpoznawania przewoźnika i zachowanie panelu przy błędzie pojedynczego numeru.</p></article>
+        <article class="content-card"><h3>Pilot i weryfikacja</h3><p>Przygotowałem działający panel przy wsparciu AI, testowałem go na rzeczywistych zbiorach, analizowałem błędy i opisałem sposób korzystania oraz ograniczenia rozwiązania.</p></article>
+      </div>
+    </section>
+
+    <section id="przebieg" aria-labelledby="flow-title">
+      <div class="section-head"><div><span class="section-label">Przepływ pracy</span><h2 id="flow-title">Od pliku do raportu.</h2></div><p>Użytkownik dostarcza dane tylko raz. Panel rozdziela zadania pomiędzy przewoźników, pokazuje postęp i na końcu przygotowuje wspólny wynik.</p></div>
+      <div class="flow-list">
+        <article class="flow-step"><b>1</b><h3>Import danych</h3><p>Wczytanie pliku Excel albo wklejenie listy numerów przesyłek.</p></article>
+        <article class="flow-step"><b>2</b><h3>Rozpoznanie przewoźnika</h3><p>Przypisanie numerów do DHL, DPD lub InPost. GLS może zostać rozpoznany, ale jego integracja pozostaje nieaktywna.</p></article>
+        <article class="flow-step"><b>3</b><h3>Pobranie danych z API</h3><p>Niezależne kolejki pobierają statusy, historię zdarzeń i informacje potrzebne do raportu.</p></article>
+        <article class="flow-step"><b>4</b><h3>Kontrola i odporność na błędy</h3><p>Pojedynczy niepoprawny numer nie zatrzymuje całego zadania. Użytkownik widzi postęp oraz problemy wymagające sprawdzenia.</p></article>
+        <article class="flow-step"><b>5</b><h3>Raport wynikowy</h3><p>Panel udostępnia raport Excel, zestawienie statusów CSV, historię zdarzeń CSV i podsumowanie operacji.</p></article>
+      </div>
+    </section>
+
+    <section aria-labelledby="views-title">
+      <div class="section-head"><div><span class="section-label">Widoki</span><h2 id="views-title">Czytelny proces, nie przypadkowy dashboard.</h2></div><p>Materiały pokazują momenty ważne dla użytkownika: kontrolę postępu oraz gotowy raport. Każdy ekran można otworzyć w pełnej rozdzielczości.</p></div>
+      <div class="gallery-grid readable">
+        <figure class="case-figure screen-focus carrier-progress"><a href="case-studies/multi-carrier/progress.png" target="_blank" rel="noopener" aria-label="Otwórz ekran pracy panelu w pełnej rozdzielczości"><img src="case-studies/multi-carrier/progress.png" alt="Pasek postępu analizy przesyłek z osobnymi kolejkami przewoźników" loading="lazy"></a><figcaption>Praca w toku: osobne kolejki przewoźników, pasek postępu i informacja o przewidywanym czasie. Kliknij, aby powiększyć.</figcaption></figure>
+        <figure class="case-figure screen-focus carrier-report"><a href="case-studies/multi-carrier/report.png" target="_blank" rel="noopener" aria-label="Otwórz raport panelu w pełnej rozdzielczości"><img src="case-studies/multi-carrier/report.png" alt="Raport po zakończeniu analizy przesyłek" loading="lazy"></a><figcaption>Gotowy wynik: raporty do pobrania, podsumowanie czasu oraz informacje o jakości danych. Kliknij, aby powiększyć.</figcaption></figure>
+      </div>
+    </section>
+
+    <section id="dowody" aria-labelledby="proof-title">
+      <div class="section-head"><div><span class="section-label">Rezultat</span><h2 id="proof-title">Sprawdzony na realnej skali.</h2></div><p>Najważniejszym dowodem nie jest liczba użytych bibliotek, lecz możliwość przejścia przez cały proces na rzeczywistych danych operacyjnych.</p></div>
+      <div class="proof-box">
+        <div class="proof-number"><strong>~6000</strong><span>rzeczywistych rekordów wykorzystanych podczas testów panelu</span></div>
+        <div class="proof-copy"><h3>Co zostało potwierdzone?</h3><p>Panel potrafił rozdzielić dane pomiędzy trzy aktywne integracje, zebrać statusy i zdarzenia, kontynuować pracę mimo błędów pojedynczych rekordów oraz przygotować pliki wynikowe.</p><p>Dla przykładowej próbki 255 rekordów wykonanie panelu trwało około 3 minut i 7 sekund. Porównanie z czasem ręcznym jest szacunkiem testowym, a nie pomiarem stałego procesu sprzed wdrożenia.</p></div>
+      </div>
+    </section>
+
+    <section aria-labelledby="limits-title">
+      <div class="section-head"><div><span class="section-label">Technologia i granice</span><h2 id="limits-title">Uczciwy status projektu.</h2></div><p>Narzędzie było działającym pilotem uruchamianym przez Google Colab i tymczasowy tunel Cloudflare. Nie miało docelowego hostingu, systemu logowania ani pełnego monitoringu produkcyjnego.</p></div>
+      <div class="content-grid">
+        <article class="content-card"><h3>Technologie</h3><p>Python, Flask, JavaScript, REST API przewoźników, Excel, CSV, Google Colab i Cloudflare Tunnel.</p><div class="stack"><span>Python</span><span>Flask</span><span>JavaScript</span><span>DHL API</span><span>DPD API</span><span>InPost API</span><span>Excel</span></div></article>
+        <article class="content-card"><h3>Co dalej wymagałoby pracy?</h3><p>Stały hosting, autoryzacja użytkowników, bezpieczne zarządzanie konfiguracją, monitoring, testy integracyjne i formalne utrzymanie wersji produkcyjnej.</p></article>
+      </div>
+    </section>
+
+    <section aria-labelledby="privacy-title">
+      <div class="privacy-note"><span class="privacy-icon" aria-hidden="true">✓</span><div><h3 id="privacy-title">Poufność</h3><p>Widoki w portfolio nie zawierają danych klientów, numerów przesyłek, danych dostępowych, tokenów API ani prywatnych adresów panelu. Nazwy i rekordy są przykładowe lub zanonimizowane. Kod nie jest publikowany.</p></div></div>
+    </section>
+
+    <section aria-label="Następny projekt"><a class="next-project" href="allegro.html"><span><small>Następne case study</small><strong>Panel analityczny Allegro — oferty i oceny</strong></span><span class="arrow" aria-hidden="true">→</span></a></section>
+  </main>
+  <footer><span>Panel analizy przesyłek · Paweł Karolak · 2026</span><span><a href="index.html">Portfolio główne</a> · <a href="mailto:pawel.karolak1996@gmail.com">Kontakt</a></span></footer>
+</div>
+</body>
+</html>
